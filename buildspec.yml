@@ -7,7 +7,7 @@ phases:
   pre_build:
     commands:
       - echo Starting deletion of existing build
-      - aws s3 rm s3://profileimages-1306/package/ || true
+      - aws s3 rm s3://profileimages-1306/package/Hello-World/target/ || true
   build:
     commands:
       - echo Build started on `date`
