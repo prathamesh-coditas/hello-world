@@ -15,7 +15,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - aws s3 cp target/hello-world-1.0.jar s3://profileimages-1306/package/
+#      - aws s3 cp target/hello-world-1.0.jar s3://profileimages-1306/package/
 artifacts:
   files:
     - target/hello-world-1.0.jar
