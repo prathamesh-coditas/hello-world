@@ -6,7 +6,8 @@ phases:
       java: corretto8
   pre_build:
     commands:
-      - echo Nothing to do in the pre_build phase...
+      - echo Starting deletion of existing build
+      - aws s3 rm s3://profileimages-1306/package/ || true
   build:
     commands:
       - echo Build started on `date`
@@ -14,6 +15,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - aws s3 cp target/hello-world-1.0.jar s3://profileimages-1306/package/
 artifacts:
   files:
     - target/hello-world-1.0.jar
