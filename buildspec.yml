@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: 1.8
+  build:
+    commands:
+      - ./mvnw package
+  post_build:
+    commands:
+      - aws s3 cp target/my-maven-project-1.0-SNAPSHOT.jar s3://profileimages-1306/package/
