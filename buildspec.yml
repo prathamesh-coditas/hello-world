@@ -3,10 +3,17 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto8
+      java: corretto11
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
   build:
     commands:
-      - ./mvn clean install
+      - echo Build started on `date`
+      - mvn install
   post_build:
     commands:
-      - aws s3 cp target/hello-world-1.0.jar s3://profileimages-1306/package/
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - target/hello-world-1.0.jar.jar
