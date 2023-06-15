@@ -9,4 +9,4 @@ phases:
       - ./mvn clean install
   post_build:
     commands:
-      - aws s3 cp target/my-maven-project-1.0-SNAPSHOT.jar s3://profileimages-1306/package/
+      - aws s3 cp target/hello-world-1.0.jar s3://profileimages-1306/package/
