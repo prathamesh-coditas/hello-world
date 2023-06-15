@@ -6,7 +6,7 @@ phases:
       java: corretto8
   build:
     commands:
-      - ./mvnw package
+      - ./mvn clean install
   post_build:
     commands:
       - aws s3 cp target/my-maven-project-1.0-SNAPSHOT.jar s3://profileimages-1306/package/
