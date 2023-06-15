@@ -50,7 +50,7 @@
         <repository>
             <id>Component1-s3-snapshot-repo</id>
             <name>Component1-s3-snapshot-repo</name>
-            <url>s3://profileimages-1306/snapshot/</url>
+            <url>s3://profileimages-1306/snapshot</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
