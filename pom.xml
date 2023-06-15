@@ -15,5 +15,48 @@
                 <version>3.8.0</version>
             </plugin>
         </plugins>
+        <extensions>
+            <extension>
+                <groupId>com.github.ehsaniara</groupId>
+                <artifactId>maven-repository-aws-s3</artifactId>
+                <version>1.2.11</version>
+            </extension>
+        </extensions>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>profileimages-1306</id>
+            <name>Release Repository for Component1</name>
+            <url>s3://profileimages-1306/release</url>
+        </repository>
+        <snapshotRepository>
+            <id>profileimages-1306</id>
+            <name>Snapshot Repository for Component1</name>
+            <url>s3://profileimages-1306/snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <repositories>
+        <repository>
+            <id>Component1-s3-release-repo</id>
+            <name>S3 Release Repository for component1</name>
+            <url>s3://profileimages-1306/release</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>Component1-s3-snapshot-repo</id>
+            <name>Component1-s3-snapshot-repo</name>
+            <url>s3://profileimages-1306/snapshot/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
