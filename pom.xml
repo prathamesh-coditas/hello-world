@@ -15,13 +15,6 @@
                 <version>3.8.0</version>
             </plugin>
         </plugins>
-        <extensions>
-            <extension>
-                <groupId>com.github.ehsaniara</groupId>
-                <artifactId>maven-repository-aws-s3</artifactId>
-                <version>1.2.11</version>
-            </extension>
-        </extensions>
     </build>
     <distributionManagement>
         <repository>
